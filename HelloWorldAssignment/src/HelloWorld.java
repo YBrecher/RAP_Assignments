@@ -1,8 +1,14 @@
 public class HelloWorld {
 
-    public static void main(String[] args){
+    private int x = 5;
+
+    public  void main(String[] args){
 
         System.out.println("Hello World");
 
+        System.out.println(x );
+
+
     }
+
 }
