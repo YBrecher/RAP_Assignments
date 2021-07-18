@@ -1,3 +1,9 @@
+
+import util.DBConnection;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.Scanner;
 
 /**
@@ -5,8 +11,11 @@ import java.util.Scanner;
  */
 public class Bank {
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws SQLException {
 
+        Connection connection = DBConnection.getConnection();
+
+        /**
         Scanner scnr = new Scanner(System.in);
 
         System.out.println("Welcome to the Banking App.");
@@ -14,7 +23,7 @@ public class Bank {
         System.out.println("Please select on option.");
         System.out.println("1. Customer Login");
         System.out.println("2. Employee Login");
-        System.out.println("3. Create Customer Account");
+        System.out.println("3. Register");
 
         int userInput = scnr.nextInt();
 
@@ -95,6 +104,7 @@ public class Bank {
                 System.exit(0);
                 break;
         }
+         **/
 
 
     }

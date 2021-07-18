@@ -1,26 +1,27 @@
+
 import java.util.Scanner;
 
-public class Employee implements User{
+public class Customer implements User {
 
-    int employeeID;
+    int customerID;
     String firstName;
     String lastName;
     String userName;
     String password;
     Boolean loggedIn = false;
 
-    public Employee(String userName, String password, int employeeID){
+    public Customer(String userName, String password, int customerID){
         this.userName = userName;
         this.password = password;
-        this.employeeID = employeeID;
+        this.customerID = customerID;
     }
 
-    public int getEmployeeID() {
-        return employeeID;
+    public int getCustomerID() {
+        return customerID;
     }
 
-    public void setEmployeeID(int customerID) {
-        this.employeeID = customerID;
+    public void setCustomerID(int customerID) {
+        this.customerID = customerID;
     }
 
     public String getFirstName() {
@@ -75,17 +76,15 @@ public class Employee implements User{
         }
     }
 
-    public void viewCustomersAccounts(int customerID){
+    public void applyForBankAccount(int balance){
 
     }
 
-    public void viewTransactions(int customerID){
+    public void withdraw(int accountID, int amount){
 
     }
 
-    public void approveOrRejectAccount(int customerID, int accountID){
+    public void deposit(int accountID, int amount){
 
     }
-
-
 }
