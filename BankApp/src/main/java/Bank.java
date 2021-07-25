@@ -208,7 +208,7 @@ public class Bank {
         }
     }
 
-    private static void viewBalance(Customer customer, Account account) throws InterruptedException {
+    public static int viewBalance(Customer customer, Account account) throws InterruptedException {
         System.out.println();
         System.out.println("Your balance for your " + account.getName()
                 + " account is $" + account.getBalance() +".");
@@ -216,6 +216,8 @@ public class Bank {
         System.out.println("What else would you like to do?");
         System.out.println();
         displayCustomerActions(customer,account);
+
+        return account.getBalance();
     }
 
     private static void displayEmployeeLogin() throws InterruptedException {
