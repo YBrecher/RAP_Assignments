@@ -1,19 +1,20 @@
 
 import java.util.Scanner;
 
-public class Customer implements User {
+public class Customer {
 
     int customerID;
-    String firstName;
-    String lastName;
     String userName;
     String password;
-    Boolean loggedIn = false;
+    String firstName;
+    String lastName;
 
-    public Customer(String userName, String password, int customerID){
+    public Customer( int customerID, String userName, String password, String firstName, String lastName){
+        this.customerID = customerID;
         this.userName = userName;
         this.password = password;
-        this.customerID = customerID;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     public int getCustomerID() {
@@ -54,37 +55,5 @@ public class Customer implements User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    @Override
-    public void login() {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Enter your user name: ");
-        String nameInput = scanner.nextLine();
-
-        System.out.println("Enter your user password: ");
-        String passwordInput = scanner.nextLine();
-
-        if (nameInput.equals(userName) && passwordInput.equals(password)){
-            System.out.println("Welcome " + userName);
-            loggedIn = true;
-        }
-
-        else{
-            System.out.println("Sorry that user name or password is incorrect.");
-        }
-    }
-
-    public void applyForBankAccount(int balance){
-
-    }
-
-    public void withdraw(int accountID, int amount){
-
-    }
-
-    public void deposit(int accountID, int amount){
-
     }
 }
