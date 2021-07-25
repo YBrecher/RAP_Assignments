@@ -15,33 +15,8 @@ public class Bank {
     private static final Logger LOG = LogManager.getLogger(Bank.class);
 
     public static void main(String[] args) throws SQLException, InterruptedException {
-
-        /**
-        String sql = "select balance from accounts " +
-                "inner join customers on accounts.customer_id = customers.customer_id" +
-                " where customers.customer_id = ?";
-
-
-        try(Connection connection = DBConnection.getConnection();
-            PreparedStatement statement = connection.prepareStatement(sql);)
-        {
-            statement.setInt(1, 1);
-            statement.execute();
-
-            ResultSet rs = statement.getResultSet();
-
-            while (rs.next()){
-                System.out.println(rs.getString("balance"));
-            }
-        }
-         **/
-
-
         LOG.trace("displayStartScreen method called.");
         displayStartScreen();
-
-
-
     }
 
     private static void displayStartScreen() throws InterruptedException {
